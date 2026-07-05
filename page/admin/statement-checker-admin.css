@@ -1,0 +1,116 @@
+  /* ─── ADMIN PANEL ─── */
+  .admin-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: 999;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  }
+  .admin-overlay.open {
+  display: block;
+  }
+
+
+  .admin-modal {
+  background: var(--card);
+  border-radius: 14px;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  box-shadow: var(--shadow);
+  }
+
+
+  .admin-header {
+    background: var(--navy);
+    padding: 20px 28px;
+    border-radius: 14px 14px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .admin-header h2 { color: #fff; font-size: 16px; font-weight: 600; }
+  .admin-header .close-btn {
+    background: rgba(255,255,255,0.15);
+    border: none;
+    color: #fff;
+    width: 32px; height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .admin-body { padding: 28px; }
+  .admin-section { margin-bottom: 24px; }
+  .admin-section-title {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--muted);
+    margin-bottom: 12px;
+  }
+  .ifar-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  .ifar-stat {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 12px;
+    text-align: center;
+  }
+  .ifar-stat .sv { font-size: 20px; font-weight: 600; font-family: "DM Mono",monospace; color: var(--navy); }
+  .ifar-stat .sl { font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; margin-top: 2px; }
+
+  /* Admin upload wizard */
+  .admin-steps { display:flex; gap:6px; margin-bottom:20px; flex-wrap:wrap; }
+  .admin-step-dot {
+    font-size:11px; font-family:"DM Mono",monospace; padding:4px 10px; border-radius:20px;
+    background: var(--surface); border:1px solid var(--border); color: var(--muted);
+  }
+  .admin-step-dot.active { background: var(--navy); color:#fff; border-color: var(--navy); }
+  .admin-step-dot.done { background: var(--success-bg); color: var(--success); border-color:#b3e8d0; }
+  .admin-phase { display:none; }
+  .admin-phase.active { display:block; }
+  .col-summary-grid {
+    display:grid; grid-template-columns: repeat(3, 1fr); gap:12px; margin: 16px 0 20px;
+  }
+  .col-summary-card {
+    background: var(--surface); border:1px solid var(--border); border-radius:10px; padding:14px;
+  }
+  .col-summary-card .csc-title {
+    font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:0.05em;
+    color: var(--navy); margin-bottom:10px; padding-bottom:8px; border-bottom:1px solid var(--border);
+  }
+  .col-summary-card .csc-row { display:flex; justify-content:space-between; align-items:baseline; margin-bottom:4px; }
+  .col-summary-card .csc-row:last-child { margin-bottom:0; }
+  .col-summary-card .csc-num { font-family:"DM Mono",monospace; font-weight:600; font-size:16px; color: var(--navy); }
+  .col-summary-card .csc-num.mismatch { color: var(--warn); }
+  .col-summary-card .csc-lbl { font-size:10.5px; color: var(--muted); }
+  .admin-upload-zone {
+    border: 2px dashed var(--border);
+    border-radius: 10px;
+    padding: 32px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    background: var(--surface);
+    position: relative;
+  }
+  .admin-upload-zone:hover { border-color: var(--navy-light); background: #f0f4ff; }
+  .admin-upload-zone input { position: absolute; inset: 0; opacity: 0; cursor: pointer; }
+  .admin-log {
+    background: #1a1f36;
+    border-radius: 8px;
+    padding: 16px;
+    font-family: "DM Mono", monospace;
+    font-size: 12px;
+    color: #a8b4d4;
+  }

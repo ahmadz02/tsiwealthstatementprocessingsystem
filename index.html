@@ -385,6 +385,8 @@
     .badge-green { background: var(--success-bg); color: var(--success); }
     .badge-warn { background: var(--warn-bg); color: var(--warn); }
     .badge-red { background: var(--danger-bg); color: var(--danger); }
+    .badge-black { background: var(--danger-bg); color: var(--danger); }
+    .badge-white { background: #000000; color: #ffffff; }
 
     .upload-zone input[type=file] {
       position: absolute; inset: 0; opacity: 0; cursor: pointer;
@@ -856,7 +858,16 @@
             <div class="quick-card" onclick="location.href='page/admin/statement-checker-admin.html'">
               <div class="qc-header">
                 <div class="icon-wrap">
-                  <svg viewBox="0 0 24 24" stroke-width="2" fill="none"><circle cx="12" cy="12" r="3"></circle></svg>
+                  <div class="icon-wrap">
+                  <svg viewBox="0 0 24 24" stroke-width="2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 3v12"></path>
+                  <path d="M8 7l4-4 4 4"></path>
+                <path d="M4 17v4h16v-4"></path>
+                </svg>
+            </div>
+
+
+                  
                 </div>
                 <span class="badge badge-red">Control</span>
               </div>
@@ -867,7 +878,9 @@
             <div class="quick-card" onclick="window.open('https://tsiw-admin-panel-v2.vercel.app/auth/sign-in', '_blank', 'noopener,noreferrer')">
               <div class="qc-header">
                 <div class="icon-wrap">
+                  <svg viewBox="0 0 24 24" stroke-width="2" fill="none"><circle cx="12" cy="12" r="6"></circle></svg>
                 </div>
+                <span class="badge badge-white">GENERATE</span>
               </div>
               <h3>Administration</h3>
               <p>Calculate commission payouts and generate reports.</p>

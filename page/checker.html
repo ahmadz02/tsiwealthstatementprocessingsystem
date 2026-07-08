@@ -784,6 +784,7 @@
             <option>Zurich</option>
             <option>Etiqa</option>
             <option>Takaful Ikhlas</option>
+            <option>Others</option>
           </select>
         </div>
         <div class="field">
@@ -1665,12 +1666,13 @@ const ADMIN_FIELDS = [
   { key: 'Zurich',         label: 'Zurich IFAR Code',  required: false, guess: ['Zurich IFAR Code'] },
   { key: 'Etiqa',          label: 'Etiqa Takaful Code',required: false, guess: ['Etiqa Takaful Code'] },
   { key: 'Takaful Ikhlas', label: 'Takaful Ikhlas Code',required: false, guess: ['Takaful Ikhlas Code'] },
+  { key: 'Others',         label: 'Others',            required: false, guess: ['Others'] }
 ];
 
 const COL_LABELS = {
   'HLMT': 'HLMT IFAR Code', 'GE': 'GE IFAR Code', 'AIA': 'AIA IFAR Code',
   'PruBSN': 'PruBSN IFAR Code', 'PruBSN-EB': 'PruBSN-EB', 'Zurich': 'Zurich IFAR Code',
-  'Etiqa': 'Etiqa Takaful Code', 'Takaful Ikhlas': 'Takaful Ikhlas Code',
+  'Etiqa': 'Etiqa Takaful Code', 'Takaful Ikhlas': 'Takaful Ikhlas Code', 'Others': 'Others'
 };
 
 const adminState = {
